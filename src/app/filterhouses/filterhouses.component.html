@@ -1,0 +1,33 @@
+<div class="row">
+
+  <div class="col -12">
+  <form #createBlogForm="ngForm" (ngSubmit)="getHouseData()">
+          <div class="form-group form-css">
+                  <input type="text" name="HouseName" [(ngModel)]="houseName" #name="ngModel" class="form-control"
+                   placeholder="Name of the House" required><br/>
+                    <button type="submit" class="btn btn-success" [disabled]="!createBlogForm.form.valid">Search</button>
+          </div>
+  </form>
+  </div>
+</div>
+
+
+
+<div class="row"*ngIf="houseData">
+<div *ngFor="let house of houseData" class="col-md-4" id="mouseover-effect">
+  <div class="card cardContainer" style="width: 18rem;">
+      <img class="card-img-top" src="../../houses.jpg" alt="Card image cap">
+      <div class="card-body">
+           <h5 class="card-title"><i>{{house.name}} </i></h5>
+          <p class="card-text">
+                  <b>Region: </b> <i>{{house.region}}</i>
+            <br/> <b>Coat of Arms: </b> <i>{{house.coatOfArms}}</i>
+            <br/> <b>Words: </b> <i>{{house.words}}</i>
+          </p>
+          <a [routerLink]="['/house',house.url]" class="btn btn-primary">More</a>
+      </div>
+  </div>
+
+  <br/>
+</div>
+</div>

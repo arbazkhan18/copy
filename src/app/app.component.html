@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row header">
+    <div class="col-12">
+                            <!-- header-->
+        <div class="sandbox sandbox-correct-pronounciation">
+            <h1 class="heading heading-correct-pronounciation">
+            
+              <em>Game of thrones </em>
+             application using Angular  
+            </h1>
+          </div>  <!-- header ends-->
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg  headerNav" style="background-color: #e3f2fd;">
+
+          <a class="navbar-brand" [routerLink]="['HOME']"> HOME</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link " [routerLink]="['filterCharacter']"><b>CHARACTERS</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " [routerLink]="['filterBook']"><b>BOOKS</b> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " [routerLink]="['filterHouse']"><b>HOUSES</b></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <span style="text-align: center">
+      <router-outlet></router-outlet>
+    </span>
+  </div>
+</div>

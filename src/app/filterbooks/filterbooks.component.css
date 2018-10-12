@@ -1,0 +1,13 @@
+.form-css{
+    margin-bottom: 40px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 255, 0.438);
+     
+}
+
+.row{
+         
+    opacity: 0.8;
+}

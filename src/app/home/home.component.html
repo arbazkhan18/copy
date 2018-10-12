@@ -1,0 +1,57 @@
+<div class="row">
+
+  <!-- <div *ngIf="characterData"> -->
+    <div *ngFor="let character of characterData" class="col-md-4" id="mouseover-effect">
+      <div class="card cardContainer" style="width: 21rem;">
+        <img class="card-img-top" src="../../characters.jpg" alt="Charaters image">
+        <div class="card-body">
+          <h6 class="card-title"><b>Character: </b> {{character.name}}</h6>
+          <p class="card-text"> 
+                   <b>Gender:  </b>  <i>{{character.gender}}</i>
+             <br/>  <b>Born: </b>   <i>{{character.born}}</i>
+             <br/>  <b>Culture:  </b> <i>{{character.culture}}</i>
+          </p>
+          <a [routerLink]="['/character',character.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <!-- </div> -->
+<!-- 
+  <div *ngIf="bookData"> -->
+    <div *ngFor="let book of bookData" class="col-md-4" id="mouseover-effect">
+      <div class="card cardContainer" style="width: 21rem;">
+        <img class="card-img-top" src="../../books.jpg" alt="book image">
+        <div class="card-body">
+          <h4 class="card-title">{{book.name}}</h4>
+          <p class="card-text">
+                  <b>publisher:  </b>  <i>{{book.publisher}}</i>
+            <br/> <b>Author:  </b>     <i>{{book.authors.toString()}} </i>
+            <br/> <b>Country:  </b>    <i>{{book.country}} </i>
+          </p>
+          <a [routerLink]="['/book',book.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+
+      <br/>
+    </div>
+  <!-- </div> -->
+<!-- 
+  <div *ngIf="houseData"> -->
+    <div *ngFor="let house of houseData" class="col-md-4 backColor" id="mouseover-effect">
+      <div class="card cardContainer" style="width: 21rem;">
+        <img class="card-img-top" src="../../houses.jpg" alt="house image">
+        <div class="card-body">
+          <h4 class="card-title">{{house.name}}</h4>
+          <p class="card-text">
+                  <b>Region: </b> <i>{{house.region}}</i>
+            <br/> <b>Coat of Arms: </b> <i>{{house.coatOfArms}}</i>
+            <br/> <b>Words: </b> <i>{{house.words}}</i>
+          </p>
+          <a [routerLink]="['/house',house.url]" class="btn btn-primary">More</a>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <!-- </div> -->
+</div>

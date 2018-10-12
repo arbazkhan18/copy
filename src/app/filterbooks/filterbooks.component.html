@@ -1,0 +1,32 @@
+<div class="row">
+
+  <div class="col -12">
+  <form #createBlogForm="ngForm" (ngSubmit)="getBookData()">
+          <div class="form-group form-css">
+                  <input type="text" name="BookName" [(ngModel)]="bookName" #name="ngModel" class="form-control"
+                   placeholder="Name of the book" required><br/>
+                    <button type="submit" class="btn btn-success" [disabled]="!createBlogForm.form.valid">Search</button>
+          </div>
+  </form>
+  </div>
+</div>
+
+<div class="row" *ngIf="bookData">
+<div *ngFor="let book of bookData" class="col-md-4" id="mouseover-effect">
+  <div class="card cardContainer" style="width: 18rem;">
+      <img class="card-img-top" src="../../books.jpg" alt="Card image cap">
+      <div class="card-body">
+          <h4 class="card-title">{{book.name}}</h4>
+          <p class="card-text">
+                  <b>publisher:  </b>  <i>{{book.publisher}}</i>
+            <br/> <b>Author:  </b>     <i>{{book.authors.toString()}} </i>
+            <br/> <b>Country:  </b>    <i>{{book.country}} </i>
+          </p>
+        <a [routerLink]="['/book',book.url]" class="btn btn-primary">More</a>
+      </div>
+    </div>
+
+<br/>
+</div>
+
+</div>

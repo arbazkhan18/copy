@@ -1,0 +1,50 @@
+
+.header{
+   
+    color: white;
+    padding: 1%;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    background-image: linear-gradient( #090979 35%,#020024 0%);
+ 
+}
+a:hover{
+    display: block;
+    background: #3cdd49;
+    border-radius: 10px;
+}
+
+/* custom  css */
+ @import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
+
+
+.heading-correct-pronounciation {
+
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+
+h1 {
+  color: #fff;
+  font-family: 'Cardo', serif;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 1.8em;
+}
+
+em {
+  font-family: 'EB Garamond', serif;
+  font-size: 2em;
+ text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style:normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+  
+}
